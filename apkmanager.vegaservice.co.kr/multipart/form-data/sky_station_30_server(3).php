@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><SRS><SCMD>GET_PKG_DETAIL_INFO</SCMD><TMPS>NOT_OK</TMPS></SRS>
