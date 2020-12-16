@@ -1,7 +1,17 @@
+목표: V-Protection 원격 해제.
+가진 것: vegaservice.co.kr 도메인 보유중으로, 프로그램 코드만 잘 수정한다면 원격해제가 가능함.
+
+중간 1차 목표: 평상시 Client에서 Server로 전송되는 정보 확인.
+중간 2차 목표: 잠금해제시 Server에서 Client로 전송되는 정보 확인.
+
+최종 1차 목표: 휴대폰 소유자로부터 IMEI 또는 시리얼넘버 등의 정보를 제공받아, V프로텍션을 원격 해제.
+최종 2차 목표: 중앙서버를 두고 Telegram Bot으로 만들어서 서비스센터에 배포.
+
+금번 확인 날짜: 2020/12/16
 원 파일 출처: https://cafe.naver.com/skyplanet/5883
-디컴파일 방법: apktool 2.5.0 이용, apktool.bat "SKY Protection_v1.0.8.apk"
+디컴파일 방법: apktool 2.5.0 이용, CMD [ apktool.bat "SKY Protection_v1.0.8.apk" ]
 디컴파일 참조: https://blog.yena.io/studynote/2020/02/10/Android-App-Decompile.html
-검색 방법: 내부 소스코드 중 'co.kr'로 끝나는 모든 파일을 검색.
+검색 방법: 내부 소스코드 중 'co.kr'로 끝나는 모든 파일을 검색. BASH [ grep -r '.co.kr' ./ ]
 
 결과:
 root@SystemX:/mnt/c/Users/wjdgo/Downloads/apktool/SKY Protection_v1.0.8# grep -r '.co.kr' ./
@@ -25,3 +35,12 @@ root@SystemX:/mnt/c/Users/wjdgo/Downloads/apktool/SKY Protection_v1.0.8# grep -r
 ./smali/com/pantech/app/skyprotection/service/MapService$GetMapDataAsync.smali:    const-string v14, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
 ./smali/com/pantech/app/skyprotection/VProtectionConfig.smali:    const-string v1, "@yahoo.co.kr"
 root@SystemX:/mnt/c/Users/wjdgo/Downloads/apktool/SKY Protection_v1.0.8#
+
+
+정리:
+다음 서버 파일들이 Vprotection과 관련이 있음.
+
+http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php
+
+
+
