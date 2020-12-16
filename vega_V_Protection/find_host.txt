@@ -1,0 +1,27 @@
+원 파일 출처: https://cafe.naver.com/skyplanet/5883
+디컴파일 방법: apktool 2.5.0 이용, apktool.bat "SKY Protection_v1.0.8.apk"
+디컴파일 참조: https://blog.yena.io/studynote/2020/02/10/Android-App-Decompile.html
+검색 방법: 내부 소스코드 중 'co.kr'로 끝나는 모든 파일을 검색.
+
+결과:
+root@SystemX:/mnt/c/Users/wjdgo/Downloads/apktool/SKY Protection_v1.0.8# grep -r '.co.kr' ./
+./res/values/strings.xml:    <string name="str_certus_service_term_total">1. 수집하는 개인정보 항목&lt;br> 회사는 서비스 제공을 위해 아래와 같은 개인정보들을 수집합니다.&lt;br> 1) 필수: 원격제어 비밀번호, 전화번호 / 선택: 이메일&lt;br> 2) 이용자가 전화/문자 내역 확인 서비스 이용시 원격관리 대상 단말기에 송수신된 전화/문자 내역이 수집될 수 있습니다. 단, 회사는 이를 저장하지 않습니다.&lt;br> 3) 서비스 이용과정에서 아래와 같은 정보들이 자동으로 생성되어 수집될 수 있습니다.&lt;br> - 잔여 배터리량 정보, 접속로그, 서비스 이용기록 등 &lt;br>&lt;br> 2. 개인정보 수집 및 이용 목적&lt;br> 회사는 다음과 같은 이유로 개인정보를 수집합니다.&lt;br> 1) 분실폰 개인정보 보호 기본 기능 제공 &lt;br> - 원격제어 비밀번호는 이용자가 원격 단말 관리를 위해 원격관리 대상 단말기에 미리 설정ㆍ저장 한 비밀번호와 일치하는지 여부를 확인하기 위한 정보로 활용됩니다. 전화번호는 이용자의 연락처 정보를 원격관리 대상 단말기 화면에 표시하거나 SMS 등으로 이용 결과를 안내하기 위해 사용되며, 이메일은 SMS 외 추가적으로 이용결과를 안내하기 위해 사용됩니다. 전화/문자  내역은 이용자가 원격관리 대상 단말기에 송수신된 전화/문자 내역 확인 서비스 이용시 수집될 수 있으나, 회사는 이를 저장하지 않습니다. 잔여 배터리량 정보는 이용자에게 원격관리 대상 단말기의 잔여 배터리량 상태 정보 제공 및 에코모드 기능을 제공하기 위한 목적으로 사 용됩니다.&lt;br> 2) 마케팅 및 광고에 활용&lt;br> - 신규 서비스 개발 및 맞춤 서비스 제공, 인구 통계학적 특성에 따른 서비스 제공 및 광고 게재, 접속 빈도 파악, 서비스 이용에 대한 통계 및 이벤트 및 광고성 정보 전달 &lt;br>&lt;br> 3. 개인정보 보유 및 이용 기간&lt;br> 수집한 개인정보는 원칙적으로 회사가 서비스를 제공하는 기간 동안에 한하여 보유 및 이용됩니다.&lt;br> 단, 관계법령의 규정에 의하여 보존할 필요성이 있는 경우 관계법령에 따라 보존합니다. &lt;br> ※ 관계법령의 규정에 의한 정보보유 사유 &lt;br>&lt;br> - 계약 또는 청약철회 등에 관한 기록&lt;br> 보존 이유: 전자상거래 등에서의 소비자보호에 관한 법률&lt;br> 보존 기간: 5년 &lt;br>&lt;br> - 대금 결제 및 재화 등의 공급에 관한 기록&lt;br> 보존 이유: 전자상거래 등에서의 소비자보호에 관한 법률&lt;br> 보존 기간: 5년 &lt;br>&lt;br> - 소비자의 불만 또는 분쟁처리에 관한 기록&lt;br> 보존 이유: 전자상거래 등에서의 소비자보호에 관한 법률&lt;br> 보존 기간: 3년 &lt;br>&lt;br> ※ 개인정보 수집 및 이용에 동의하는 경우에만 서비스를 이용할 수 있습니다. 다만, 선택 정보는 제공하지 않을 수 있으며, 이 경우 일부 서비스 이용에 제약이 있을 수 있습니다.&lt;br> ※ 그 밖에 개인정보에 관한 사항은 회사가 운영하는 팬택 서비스 사이트(www.pantechservice.co.kr)에 게시되는 “개인정보취급방침”이 적용되오니 이를 참고하시기 바랍니다.&lt;br></string>
+./smali/com/pantech/app/skyprotection/activity/AgreeListActivity$GetAgreeListAsync.smali:    const-string v5, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/activity/LoginActivity$VegaAccountLogIn.smali:    const-string v5, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/activity/LoginActivity.smali:    const-string v4, "http://m.ivega.co.kr/mem/memType.do"
+./smali/com/pantech/app/skyprotection/activity/LoginActivity.smali:    const-string v4, "http://m.ivega.co.kr/mem/findInput.do"
+./smali/com/pantech/app/skyprotection/activity/MainActivity$GetModelImage.smali:    const-string v8, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/activity/MainActivity$VegaVersionCheck.smali:    const-string v11, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/activity/VProtectionCmdListActivity$GetCmdResultListAsync.smali:    const-string v5, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionAlarmSendFragment.smali:    const-string v6, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionBatInfoFragment.smali:    const-string v4, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionCallLogsFragment.smali:    const-string v5, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionCmdSendFragment$SendCmdTask.smali:    const-string v6, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionLocationFragment.smali:    const-string v21, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionRemoteControlFragment.smali:    const-string v5, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/fragment/VProtectionSoundBellFragment.smali:    const-string v5, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/protocol/protocolServiceManger.smali:.field public static final DEFAULT_COMMERCIAL_SERVER_ADDR:Ljava/lang/String; = "apkmanager.vegaservice.co.kr"
+./smali/com/pantech/app/skyprotection/protocol/protocolServiceManger.smali:.field public static final DMS_PROC_SERVER:Ljava/lang/String; = "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/service/MapService$GetMapDataAsync.smali:    const-string v14, "http://apkmanager.vegaservice.co.kr/apkmanager/Process/dms/dms_app_server.php"
+./smali/com/pantech/app/skyprotection/VProtectionConfig.smali:    const-string v1, "@yahoo.co.kr"
+root@SystemX:/mnt/c/Users/wjdgo/Downloads/apktool/SKY Protection_v1.0.8#
